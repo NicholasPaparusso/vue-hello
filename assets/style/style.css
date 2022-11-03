@@ -40,7 +40,7 @@ header{
 }
 
 .big-fs{
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .fw-semi{
@@ -68,3 +68,7 @@ header{
   width: 300px;
   height: 10px;
 }
+ h1 > span{
+  display: inline-block;
+  width: 500px;
+ }
