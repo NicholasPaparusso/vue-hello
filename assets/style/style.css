@@ -40,7 +40,7 @@ header{
 }
 
 .big-fs{
-  font-size: 3em;
+  font-size: 1.5em;
 }
 
 .fw-semi{
@@ -66,5 +66,5 @@ header{
 
 .show-hide{
   width: 300px;
-  height: 30px;
+  height: 10px;
 }

@@ -22,7 +22,9 @@
       <div class="logo p-3">
         <img src="./assets/img/vue.png" alt="vue">
       </div>
-      <h1 class="w-100" :class="classArray.join(' ')">Aggiungi un titolo: {{title}}</h1>
+      <h1 class="w-100" >Aggiungi un titolo: 
+        <span :class="classArray.join(' ')">{{title}}</span>
+      </h1>
 
       <div class="control-pannel d-flex justify-content-center align-items-center">
 
@@ -47,22 +49,22 @@
   </header>
   <div class="main-container d-flex flex-column justify-content-center align-items-center" id="app">
 
-    <div v-show="!isShowed" class="img-container">
-      <img :src="path + picture" alt="">
-    </div>
-    <div class="btn-container d-flex pt-3">
-
-      <div @click="changePic()" class="mybtn left m-2"><i class="fa-solid fa-chevron-left"></i></div>
-      <div @click="changePic()" class="mybtn right m-2"><i class="fa-solid fa-chevron-right"></i></div>
-
-    </div>
-    <div @click="showHide()" class="mybtn show-hide">
-      Cliccami
+    <div @click="showHide()" class="mybtn show-hide m-3">
     </div>
     <div class="text">
       <p v-show="isShowed">
         Vue è stato creato da Evan You, dopo aver lavorato per Google utilizzando AngularJS in numerosi progetti. Ha proposto un sunto del suo processo di pensiero a seguito della sua esperienza: "Ho pensato, e se potessi solo estrarre la parte che mi piaceva molto di Angular e costruire qualcosa di veramente leggero?".[4] Il primo commit del codice sorgente del progetto è datato luglio 2013, mentre è stato pubblicato ufficialmente il febbraio successivo, nel 2014.
       </p>
+    </div>
+    <div v-show="!isShowed" class="img-container">
+      <img :src="path + picture" alt="">
+    </div>
+
+    <div class="btn-container d-flex pt-3">
+
+      <div v-show="!isShowed" @click="changePic()" class="mybtn left m-2"><i class="fa-solid fa-chevron-left"></i></div>
+      <div v-show="!isShowed" @click="changePic()" class="mybtn right m-2"><i class="fa-solid fa-chevron-right"></i></div>
+
     </div>
   </div>
 
